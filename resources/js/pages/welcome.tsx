@@ -17,9 +17,17 @@ export default function HomePage() {
                 <header className="mb-6 w-full max-w-xl text-sm">
                     <nav className="flex items-center justify-between">
                         <div className="flex gap-4">
-                            <Link href={"#"} className="text-sm text-[#EDEDEC]">home</Link>
-                            <Link href={"#"} className="text-sm text-[#EDEDEC]">home</Link>
-                            <Link href={"#"} className="text-sm text-[#EDEDEC]">home</Link>
+                            <Link href={"#"} className="text-sm leading-normal text-[#1b1b18] dark:border-[#3E3E3A] dark:text-[#EDEDEC]">home</Link>
+                            <Link href={"#"} className="text-sm leading-normal text-[#1b1b18] dark:border-[#3E3E3A] dark:text-[#EDEDEC]">home</Link>
+                            <Link href={"#"} className="text-sm leading-normal text-[#1b1b18] dark:border-[#3E3E3A] dark:text-[#EDEDEC]">home</Link>
+                            {auth.user && (
+                                <Link
+                                    href={route('dashboard')}
+                                    className="text-sm leading-normal text-[#1b1b18] dark:border-[#3E3E3A] dark:text-[#EDEDEC]"
+                                >
+                                    dashboard
+                                </Link>
+                            )}
                         </div>
                     </nav>
                 </header>
